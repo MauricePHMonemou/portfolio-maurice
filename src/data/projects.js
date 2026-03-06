@@ -2,7 +2,8 @@ const projects = [
   {
     id: 1,
     name: 'EXCELSA-RH',
-    description: 'Plateforme web sur mesure de gestion des ressources humaines — gestion des employés, workflows RH, notifications, sécurité avancée.',
+    description: 'Plateforme web sur mesure de gestion des ressources humaines.',
+    longDescription: 'Gestion complète des employés (comptes, profils, rôles hiérarchiques), workflows RH (demandes, missions, évaluations avec cycle de validation), notifications email asynchrones + in-app, sécurité avancée (authentification, timeout de session, envoi sécurisé des identifiants). Conçu et développé intégralement en autonomie.',
     tech: ['Laravel 12', 'PHP 8.2', 'Tailwind CSS', 'Alpine.js 3', 'MySQL', 'Docker', 'Blade', 'Vite 7'],
     category: 'full-stack',
     status: 'production',
@@ -13,7 +14,8 @@ const projects = [
   {
     id: 2,
     name: 'App Réclamation Notes',
-    description: 'Application web permettant de faciliter et automatiser la réclamation des notes des étudiants — conçue lors du stage à l\'ENCG d\'Oujda.',
+    description: 'Application web de gestion des réclamations de notes étudiantes.',
+    longDescription: 'Conçue lors du stage à l\'ENCG d\'Oujda, cette application permet de faciliter et d\'automatiser le processus de réclamation des notes des étudiants. Projet complet de la conception au déploiement.',
     tech: ['PHP', 'MySQL', 'HTML/CSS', 'JavaScript'],
     category: 'full-stack',
     status: 'archive',
@@ -24,12 +26,13 @@ const projects = [
   {
     id: 3,
     name: 'Portfolio Personnel',
-    description: 'Ce portfolio — SPA React avec animation constellation interactive, thème Deep Space, déployé sur Vercel.',
-    tech: ['React 18', 'Vite', 'Tailwind CSS', 'Framer Motion', 'Canvas 2D'],
+    description: 'SPA React avec animation constellation interactive et thème Deep Space.',
+    longDescription: 'Ce portfolio — Single Page Application développée avec React 18, Vite, Tailwind CSS et Framer Motion. Animation constellation Canvas 2D interactive, design glassmorphism, formulaire EmailJS, déployé sur Vercel avec CI/CD automatique.',
+    tech: ['React 18', 'Vite', 'Tailwind CSS', 'Framer Motion', 'Canvas 2D', 'EmailJS'],
     category: 'frontend',
     status: 'en-cours',
-    github: '',
-    demo: '',
+    github: 'https://github.com/MauricePHMonemou/portfolio-maurice',
+    demo: 'https://portfolio-maurice.vercel.app',
     featured: false,
   },
 ]
