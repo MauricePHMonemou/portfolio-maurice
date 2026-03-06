@@ -1,23 +1,40 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import { motion } from 'framer-motion'
 import useInView from '../hooks/useInView'
+import emailjs from '@emailjs/browser'
 import { Send, Github, Linkedin, Mail, Download } from 'lucide-react'
+
+const EMAILJS_SERVICE = 'service_e4lpbvv'
+const EMAILJS_TEMPLATE = 'template_46l4a7b'
+const EMAILJS_KEY = 'evFpMuwQvSsmrRnO3'
 
 export default function Contact() {
   const [ref, isInView] = useInView({ threshold: 0.05 })
-  const [formData, setFormData] = useState({ name: '', email: '', subject: '', message: '' })
+  const formRef = useRef(null)
+  const [formData, setFormData] = useState({ from_name: '', from_email: '', subject: '', message: '' })
   const [status, setStatus] = useState(null)
+  const [loading, setLoading] = useState(false)
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value })
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    // TODO: Intégrer EmailJS en Phase 5
-    setStatus('success')
-    setTimeout(() => setStatus(null), 3000)
-    setFormData({ name: '', email: '', subject: '', message: '' })
+    setLoading(true)
+    setStatus(null)
+
+    try {
+      await emailjs.sendForm(EMAILJS_SERVICE, EMAILJS_TEMPLATE, formRef.current, EMAILJS_KEY)
+      setStatus('success')
+      setFormData({ from_name: '', from_email: '', subject: '', message: '' })
+    } catch (error) {
+      console.error('EmailJS error:', error)
+      setStatus('error')
+    } finally {
+      setLoading(false)
+      setTimeout(() => setStatus(null), 5000)
+    }
   }
 
   const inputStyle = {
@@ -57,6 +74,7 @@ export default function Contact() {
         <div className="grid md:grid-cols-5 gap-10">
           {/* Formulaire — 3 colonnes */}
           <motion.form
+            ref={formRef}
             initial={{ opacity: 0, x: -30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -66,10 +84,10 @@ export default function Contact() {
             <div className="grid grid-cols-2 gap-4">
               <input
                 type="text"
-                name="name"
+                name="from_name"
                 placeholder="Votre nom"
                 required
-                value={formData.name}
+                value={formData.from_name}
                 onChange={handleChange}
                 style={inputStyle}
                 onFocus={(e) => e.target.style.borderColor = 'rgba(96,165,250,0.4)'}
@@ -77,10 +95,10 @@ export default function Contact() {
               />
               <input
                 type="email"
-                name="email"
+                name="from_email"
                 placeholder="Votre email"
                 required
-                value={formData.email}
+                value={formData.from_email}
                 onChange={handleChange}
                 style={inputStyle}
                 onFocus={(e) => e.target.style.borderColor = 'rgba(96,165,250,0.4)'}
@@ -98,10 +116,10 @@ export default function Contact() {
               onBlur={(e) => e.target.style.borderColor = 'rgba(96,165,250,0.1)'}
             >
               <option value="" style={{ background: '#0a0e1a' }}>Sujet du message</option>
-              <option value="emploi" style={{ background: '#0a0e1a' }}>Opportunité d'emploi</option>
-              <option value="freelance" style={{ background: '#0a0e1a' }}>Mission freelance</option>
-              <option value="collaboration" style={{ background: '#0a0e1a' }}>Collaboration</option>
-              <option value="autre" style={{ background: '#0a0e1a' }}>Autre</option>
+              <option value="Opportunité d'emploi" style={{ background: '#0a0e1a' }}>Opportunité d'emploi</option>
+              <option value="Mission freelance" style={{ background: '#0a0e1a' }}>Mission freelance</option>
+              <option value="Collaboration" style={{ background: '#0a0e1a' }}>Collaboration</option>
+              <option value="Autre" style={{ background: '#0a0e1a' }}>Autre</option>
             </select>
 
             <textarea
@@ -118,20 +136,30 @@ export default function Contact() {
 
             <button
               type="submit"
-              className="flex items-center justify-center gap-2 w-full py-3 rounded-[10px] font-semibold text-sm text-white transition-shadow"
+              disabled={loading}
+              className="flex items-center justify-center gap-2 w-full py-3 rounded-[10px] font-semibold text-sm text-white transition-all"
               style={{
-                background: 'linear-gradient(135deg, #3b82f6, #2563eb)',
+                background: loading
+                  ? 'rgba(59,130,246,0.5)'
+                  : 'linear-gradient(135deg, #3b82f6, #2563eb)',
                 boxShadow: '0 4px 20px rgba(59,130,246,0.3)',
+                cursor: loading ? 'not-allowed' : 'pointer',
               }}
-              onMouseEnter={(e) => e.target.style.boxShadow = '0 6px 28px rgba(59,130,246,0.45)'}
+              onMouseEnter={(e) => { if (!loading) e.target.style.boxShadow = '0 6px 28px rgba(59,130,246,0.45)' }}
               onMouseLeave={(e) => e.target.style.boxShadow = '0 4px 20px rgba(59,130,246,0.3)'}
             >
-              <Send size={16} /> Envoyer le message
+              <Send size={16} />
+              {loading ? 'Envoi en cours...' : 'Envoyer le message'}
             </button>
 
             {status === 'success' && (
               <p className="text-sm text-center" style={{ color: '#34d399' }}>
-                Message envoyé avec succès !
+                Message envoyé avec succès ! Je vous répondrai rapidement.
+              </p>
+            )}
+            {status === 'error' && (
+              <p className="text-sm text-center" style={{ color: '#ef4444' }}>
+                Erreur lors de l'envoi. Veuillez réessayer ou me contacter par email.
               </p>
             )}
           </motion.form>
@@ -143,7 +171,6 @@ export default function Contact() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="md:col-span-2 space-y-5"
           >
-            {/* Liens */}
             <div
               className="rounded-[12px] p-5 space-y-4"
               style={{
@@ -170,7 +197,7 @@ export default function Contact() {
                 {
                   icon: Github,
                   label: 'GitHub',
-                  href: '#',
+                  href: 'https://github.com/MauricePHMonemou',
                 },
               ].map((link, i) => (
                 
@@ -198,7 +225,6 @@ export default function Contact() {
               ))}
             </div>
 
-            {/* Bouton CV */}
             
             <a href="/cv-maurice-monemou.pdf"
               download
@@ -214,7 +240,6 @@ export default function Contact() {
               <Download size={16} /> Télécharger mon CV
             </a>
 
-            {/* Téléphone */}
             <p className="text-sm text-center" style={{ color: '#475569' }}>
               +212 774 423 910
             </p>
