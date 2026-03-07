@@ -2,6 +2,7 @@ import { useState, useRef } from 'react'
 import { motion } from 'framer-motion'
 import useInView from '../hooks/useInView'
 import emailjs from '@emailjs/browser'
+import generateCV from '../utils/generateCV'
 import { Send, Github, Linkedin, Mail, Download } from 'lucide-react'
 
 const EMAILJS_SERVICE = 'service_e4lpbvv'
@@ -226,19 +227,19 @@ export default function Contact() {
             </div>
 
             
-            <a href="/cv-maurice-monemou.pdf"
-              download
+            <button
+              onClick={generateCV}
               className="flex items-center justify-center gap-2 w-full py-3 rounded-[10px] font-semibold text-sm transition-colors"
               style={{
                 border: '1px solid rgba(96,165,250,0.2)',
                 background: 'rgba(96,165,250,0.06)',
                 color: '#60a5fa',
               }}
-              onMouseEnter={(e) => e.target.style.background = 'rgba(96,165,250,0.12)'}
-              onMouseLeave={(e) => e.target.style.background = 'rgba(96,165,250,0.06)'}
+              onMouseEnter={(e) => e.currentTarget.style.background = 'rgba(96,165,250,0.12)'}
+              onMouseLeave={(e) => e.currentTarget.style.background = 'rgba(96,165,250,0.06)'}
             >
               <Download size={16} /> Télécharger mon CV
-            </a>
+            </button>
 
             <p className="text-sm text-center" style={{ color: '#475569' }}>
               +212 774 423 910

@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import generateCV from '../utils/generateCV'
 
 export default function Hero() {
   return (
@@ -83,8 +84,8 @@ export default function Hero() {
           Voir mes projets
         </a>
         
-        <a href="/cv-maurice-monemou.pdf"
-          download
+        <button
+          onClick={generateCV}
           className="px-7 py-3 rounded-[10px] font-semibold text-sm transition-colors"
           style={{
             border: '1px solid rgba(96,165,250,0.25)',
@@ -95,7 +96,7 @@ export default function Hero() {
           onMouseLeave={(e) => e.target.style.background = 'rgba(96,165,250,0.06)'}
         >
           Télécharger mon CV
-        </a>
+        </button>
       </motion.div>
 
       <style>{`
