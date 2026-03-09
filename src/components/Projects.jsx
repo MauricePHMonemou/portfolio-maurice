@@ -13,7 +13,7 @@ const filters = [
 const statusConfig = {
   production: { label: 'Production', color: '#34d399' },
   'en-cours': { label: 'En cours', color: '#f59e0b' },
-  archive: { label: 'Archive', color: '#475569' },
+  archive: { label: 'Archive', color: '#7a8ba8' },
 }
 
 function ProjectModal({ project, onClose }) {
@@ -74,7 +74,7 @@ function ProjectModal({ project, onClose }) {
 
         {/* Description longue */}
         {project.longDescription && (
-          <p className="text-sm leading-relaxed mb-5" style={{ color: '#475569' }}>
+          <p className="text-sm leading-relaxed mb-5" style={{ color: '#7a8ba8' }}>
             {project.longDescription}
           </p>
         )}
@@ -139,7 +139,7 @@ export default function Projects() {
     : projects.filter((p) => p.category === activeFilter)
 
   return (
-    <section id="projects" className="py-24 px-6" ref={ref}>
+    <section id="projects" aria-label="Section projets" className="py-24 px-6" ref={ref}>
       <div className="max-w-5xl mx-auto">
         {/* Header */}
         <motion.div
@@ -170,7 +170,7 @@ export default function Projects() {
               className="px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200"
               style={{
                 background: activeFilter === f.key ? 'rgba(96,165,250,0.15)' : 'transparent',
-                color: activeFilter === f.key ? '#60a5fa' : '#475569',
+                color: activeFilter === f.key ? '#60a5fa' : '#7a8ba8',
                 border: activeFilter === f.key ? '1px solid rgba(96,165,250,0.2)' : '1px solid transparent',
               }}
             >
@@ -247,14 +247,14 @@ export default function Projects() {
                   </span>
                 ))}
                 {project.tech.length > 4 && (
-                  <span className="text-xs px-2 py-1 rounded-md" style={{ color: '#475569' }}>
+                  <span className="text-xs px-2 py-1 rounded-md" style={{ color: '#7a8ba8' }}>
                     +{project.tech.length - 4}
                   </span>
                 )}
               </div>
 
               {/* Indicateur cliquable */}
-              <p className="text-xs font-medium" style={{ color: '#475569' }}>
+              <p className="text-xs font-medium" style={{ color: '#7a8ba8' }}>
                 Cliquer pour voir les détails →
               </p>
             </motion.div>

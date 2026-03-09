@@ -50,7 +50,7 @@ export default function Footer() {
             >
               Maurice<span style={{ color: '#60a5fa' }}>.</span>
             </button>
-            <p className="text-sm leading-relaxed" style={{ color: '#475569' }}>
+            <p className="text-sm leading-relaxed" style={{ color: '#7a8ba8' }}>
               Responsable IT & Développeur Web Full Stack — Triple compétence IT · Web · Télécom.
             </p>
           </div>
@@ -69,9 +69,9 @@ export default function Footer() {
                   key={link.id}
                   onClick={() => scrollTo(link.id)}
                   className="text-sm text-left transition-colors"
-                  style={{ color: '#475569', background: 'none', border: 'none', cursor: 'pointer', padding: 0 }}
+                  style={{ color: '#7a8ba8', background: 'none', border: 'none', cursor: 'pointer', padding: 0 }}
                   onMouseEnter={(e) => e.target.style.color = '#60a5fa'}
-                  onMouseLeave={(e) => e.target.style.color = '#475569'}
+                  onMouseLeave={(e) => e.target.style.color = '#7a8ba8'}
                 >
                   {link.label}
                 </button>
@@ -124,10 +124,10 @@ export default function Footer() {
 
         {/* Copyright */}
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
-          <p className="text-xs" style={{ color: '#475569' }}>
+          <p className="text-xs" style={{ color: '#7a8ba8' }}>
             © {new Date().getFullYear()} Maurice MONEMOU — Tous droits réservés
           </p>
-          <p className="text-xs flex items-center gap-1" style={{ color: '#475569' }}>
+          <p className="text-xs flex items-center gap-1" style={{ color: '#7a8ba8' }}>
             Fait avec <Heart size={12} style={{ color: '#60a5fa', fill: '#60a5fa' }} /> et React + Tailwind
           </p>
         </div>

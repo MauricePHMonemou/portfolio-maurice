@@ -5,9 +5,9 @@ export default function Hero() {
   return (
     <section
       id="hero"
+      aria-label="Section d'accueil"
       className="min-h-screen flex flex-col items-center justify-center px-6 pt-24 pb-20 text-center"
     >
-      {/* Badge Disponible */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -20,6 +20,7 @@ export default function Hero() {
       >
         <span
           className="w-2 h-2 rounded-full"
+          aria-hidden="true"
           style={{
             backgroundColor: '#34d399',
             boxShadow: '0 0 8px rgba(52,211,153,0.5)',
@@ -31,7 +32,6 @@ export default function Hero() {
         </span>
       </motion.div>
 
-      {/* Titre */}
       <motion.h1
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -42,7 +42,6 @@ export default function Hero() {
         Maurice MONEMOU<span style={{ color: '#60a5fa' }}>.</span>
       </motion.h1>
 
-      {/* Sous-titre */}
       <motion.p
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -53,18 +52,16 @@ export default function Hero() {
         Responsable IT · Développeur Web Full Stack
       </motion.p>
 
-      {/* Tagline */}
       <motion.p
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.8 }}
         className="text-sm max-w-md leading-relaxed mb-8"
-        style={{ color: '#475569' }}
+        style={{ color: '#7a8ba8' }}
       >
         Triple compétence IT · Web · Télécom — Basé à Casablanca
       </motion.p>
 
-      {/* CTAs */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -73,6 +70,7 @@ export default function Hero() {
       >
         
         <a href="#projects"
+          aria-label="Voir mes projets"
           className="px-7 py-3 rounded-[10px] font-semibold text-sm text-white transition-shadow"
           style={{
             background: 'linear-gradient(135deg, #3b82f6, #2563eb)',
@@ -83,17 +81,17 @@ export default function Hero() {
         >
           Voir mes projets
         </a>
-        
         <button
           onClick={generateCV}
+          aria-label="Télécharger mon CV au format PDF"
           className="px-7 py-3 rounded-[10px] font-semibold text-sm transition-colors"
           style={{
-            border: '1px solid rgba(96,165,250,0.25)',
-            background: 'rgba(96,165,250,0.06)',
-            color: '#60a5fa',
+            border: '1px solid rgba(96,165,250,0.4)',
+            background: 'rgba(96,165,250,0.08)',
+            color: '#7cb3fc',
           }}
-          onMouseEnter={(e) => e.target.style.background = 'rgba(96,165,250,0.12)'}
-          onMouseLeave={(e) => e.target.style.background = 'rgba(96,165,250,0.06)'}
+          onMouseEnter={(e) => e.target.style.background = 'rgba(96,165,250,0.15)'}
+          onMouseLeave={(e) => e.target.style.background = 'rgba(96,165,250,0.08)'}
         >
           Télécharger mon CV
         </button>

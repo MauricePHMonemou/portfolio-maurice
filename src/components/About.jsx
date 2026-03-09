@@ -13,7 +13,7 @@ export default function About() {
   const [ref, isInView] = useInView({ threshold: 0.1 })
 
   return (
-    <section id="about" className="py-24 px-6" ref={ref}>
+    <section id="about" aria-label="Section à propos" className="py-24 px-6" ref={ref}>
       <div className="max-w-5xl mx-auto">
         {/* Header */}
         <motion.div
@@ -111,7 +111,7 @@ export default function About() {
                     </div>
                     <div>
                       <p className="text-sm font-semibold" style={{ color: '#f8fafc' }}>{item.label}</p>
-                      <p className="text-xs" style={{ color: '#475569' }}>{item.detail}</p>
+                      <p className="text-xs" style={{ color: '#7a8ba8' }}>{item.detail}</p>
                     </div>
                   </div>
                 ))}
@@ -138,7 +138,7 @@ export default function About() {
                     style={{ color: '#60a5fa' }}
                   />
                   <p className="text-xl font-bold" style={{ color: '#f8fafc' }}>{stat.value}</p>
-                  <p className="text-xs" style={{ color: '#475569' }}>{stat.label}</p>
+                  <p className="text-xs" style={{ color: '#7a8ba8' }}>{stat.label}</p>
                 </motion.div>
               ))}
             </div>
@@ -192,7 +192,7 @@ export default function About() {
             ))}
           </div>
 
-          <p className="mt-4 text-sm leading-relaxed" style={{ color: '#475569' }}>
+          <p className="mt-4 text-sm leading-relaxed" style={{ color: '#7a8ba8' }}>
             Gestion complète des employés, workflows RH (demandes, missions, évaluations),
             notifications email + in-app, sécurité avancée — conçu et développé en autonomie.
           </p>

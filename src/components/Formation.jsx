@@ -7,7 +7,7 @@ export default function Formation() {
   const [ref, isInView] = useInView({ threshold: 0.05 })
 
   return (
-    <section id="formation" className="py-24 px-6" ref={ref}>
+    <section id="formation" aria-label="Section formation" className="py-24 px-6" ref={ref}>
       <div className="max-w-4xl mx-auto">
         {/* Header */}
         <motion.div
@@ -60,7 +60,7 @@ export default function Formation() {
                       {f.option}
                     </p>
                   )}
-                  <p className="text-sm mt-2" style={{ color: '#475569' }}>
+                  <p className="text-sm mt-2" style={{ color: '#7a8ba8' }}>
                     {f.etablissement} — {f.lieu}
                   </p>
                 </div>

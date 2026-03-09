@@ -52,7 +52,7 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="py-24 px-6" ref={ref}>
+    <section id="contact" aria-label="Section contact" className="py-24 px-6" ref={ref}>
       <div className="max-w-4xl mx-auto">
         {/* Header */}
         <motion.div
@@ -67,7 +67,7 @@ export default function Contact() {
           <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: '#f8fafc' }}>
             Travaillons ensemble<span style={{ color: '#60a5fa' }}>.</span>
           </h2>
-          <p className="text-sm max-w-md mx-auto" style={{ color: '#475569' }}>
+          <p className="text-sm max-w-md mx-auto" style={{ color: '#7a8ba8' }}>
             Une question, une opportunité ou simplement envie d'échanger ? N'hésitez pas.
           </p>
         </motion.div>
@@ -241,7 +241,7 @@ export default function Contact() {
               <Download size={16} /> Télécharger mon CV
             </button>
 
-            <p className="text-sm text-center" style={{ color: '#475569' }}>
+            <p className="text-sm text-center" style={{ color: '#7a8ba8' }}>
               +212 774 423 910
             </p>
           </motion.div>

@@ -35,7 +35,7 @@ function SkillBar({ name, level, delay, isInView }) {
       </div>
       <span
         className="text-xs font-mono min-w-[28px] text-right"
-        style={{ color: '#475569' }}
+        style={{ color: '#7a8ba8' }}
       >
         {level}/5
       </span>
@@ -47,7 +47,7 @@ export default function Skills() {
   const [ref, isInView] = useInView({ threshold: 0.05 })
 
   return (
-    <section id="skills" className="py-24 px-6" ref={ref}>
+    <section id="skills" aria-label="Section compétences" className="py-24 px-6" ref={ref}>
       <div className="max-w-5xl mx-auto">
         {/* Header */}
         <motion.div
@@ -65,7 +65,7 @@ export default function Skills() {
           <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: '#f8fafc' }}>
             Stack technique<span style={{ color: '#60a5fa' }}>.</span>
           </h2>
-          <p className="text-sm max-w-lg mx-auto" style={{ color: '#475569' }}>
+          <p className="text-sm max-w-lg mx-auto" style={{ color: '#7a8ba8' }}>
             Un profil polyvalent alliant développement web, gestion IT et informatique industrielle.
           </p>
         </motion.div>

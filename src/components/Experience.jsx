@@ -7,7 +7,7 @@ export default function Experience() {
   const [ref, isInView] = useInView({ threshold: 0.05 })
 
   return (
-    <section id="experience" className="py-24 px-6" ref={ref}>
+    <section id="experience" aria-label="Section expérience" className="py-24 px-6" ref={ref}>
       <div className="max-w-4xl mx-auto">
         {/* Header */}
         <motion.div
@@ -91,7 +91,7 @@ export default function Experience() {
                         className="mt-1.5 w-1.5 h-1.5 rounded-full flex-shrink-0"
                         style={{ background: '#60a5fa' }}
                       />
-                      <span className="text-sm" style={{ color: '#475569' }}>
+                      <span className="text-sm" style={{ color: '#7a8ba8' }}>
                         {mission}
                       </span>
                     </div>
