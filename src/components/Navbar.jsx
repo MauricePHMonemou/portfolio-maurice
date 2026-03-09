@@ -69,11 +69,11 @@ export default function Navbar() {
             <img
               src={profileImg}
               alt="Maurice MONEMOU"
-              className="w-10 h-10 rounded-full object-cover"
+              className="w-15 h-15 rounded-full object-cover"
               style={{
                 border: '2px solid rgba(96,165,250,0.3)',
                 boxShadow: '0 0 10px rgba(96,165,250,0.15)',
-                objectPosition: 'center 15%',
+                objectPosition: 'center 35%',
               }}
             />
             <span className="text-[#f8fafc] font-bold text-xl tracking-tight">
