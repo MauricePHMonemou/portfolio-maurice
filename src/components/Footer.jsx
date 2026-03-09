@@ -1,4 +1,5 @@
 import { Github, Linkedin, Mail, Heart } from 'lucide-react'
+import profileImg from '../assets/images/profile.jpeg'
 
 const links = [
   { id: 'about', label: 'À propos' },
@@ -20,7 +21,7 @@ const socials = [
   },
   {
     icon: Github,
-    href: '#',
+    href: 'https://github.com/MauricePHMonemou',
     label: 'GitHub',
   },
 ]
@@ -41,14 +42,26 @@ export default function Footer() {
         }}
       >
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-8 mb-10">
-          {/* Logo + description */}
+          {/* Logo + photo + description */}
           <div className="max-w-xs">
             <button
               onClick={() => scrollTo('hero')}
-              className="text-xl font-bold mb-3 block"
-              style={{ color: '#f8fafc', background: 'none', border: 'none', cursor: 'pointer', padding: 0 }}
+              className="flex items-center gap-3 mb-3"
+              style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 0 }}
             >
-              Maurice<span style={{ color: '#60a5fa' }}>.</span>
+              <img
+                src={profileImg}
+                alt="Maurice MONEMOU"
+                className="w-30 h-30 rounded-full object-cover"
+                style={{
+                  border: '2px solid rgba(96,165,250,0.3)',
+                  boxShadow: '0 0 10px rgba(96,165,250,0.15)',
+                  objectPosition: 'center 80%',
+                }}
+              />
+              <span className="text-xl font-bold" style={{ color: '#f8fafc' }}>
+                Maurice<span style={{ color: '#60a5fa' }}>.</span>
+              </span>
             </button>
             <p className="text-sm leading-relaxed" style={{ color: '#7a8ba8' }}>
               Responsable IT & Développeur Web Full Stack — Triple compétence IT · Web · Télécom.
@@ -116,13 +129,11 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Séparateur */}
         <div
           className="w-full h-px mb-6"
           style={{ background: 'rgba(96,165,250,0.06)' }}
         />
 
-        {/* Copyright */}
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
           <p className="text-xs" style={{ color: '#7a8ba8' }}>
             © {new Date().getFullYear()} Maurice MONEMOU — Tous droits réservés

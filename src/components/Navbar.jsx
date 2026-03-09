@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
 import useScrollSpy from '../hooks/useScrollSpy'
+import profileImg from '../assets/images/profile.jpeg'
 
 const NAV_LINKS = [
   { id: 'about', label: 'À propos' },
@@ -31,7 +32,6 @@ export default function Navbar() {
     return () => window.removeEventListener('resize', onResize)
   }, [])
 
-  // Bloquer le scroll quand le menu mobile est ouvert
   useEffect(() => {
     if (menuOpen) {
       document.body.style.overflow = 'hidden'
@@ -58,11 +58,24 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+        {/* Logo + Photo */}
         <button
           onClick={() => scrollTo('hero')}
-          className="text-[#f8fafc] font-bold text-xl tracking-tight hover:opacity-80 transition-opacity"
+          className="flex items-center gap-3 hover:opacity-80 transition-opacity"
         >
-          Maurice<span className="text-[#60a5fa]">.</span>
+          <img
+            src={profileImg}
+            alt="Maurice MONEMOU"
+            className="w-15 h-15 rounded-full object-cover"
+            style={{
+              border: '2px solid rgba(96,165,250,0.3)',
+              boxShadow: '0 0 10px rgba(96,165,250,0.15)',
+              objectPosition: 'center 30%',
+            }}
+          />
+          <span className="text-[#f8fafc] font-bold text-xl tracking-tight">
+            Maurice<span className="text-[#60a5fa]">.</span>
+          </span>
         </button>
 
         <div className="hidden md:flex items-center gap-1">
@@ -107,7 +120,6 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile overlay */}
       <AnimatePresence>
         {menuOpen && (
           <motion.div
