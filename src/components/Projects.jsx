@@ -11,8 +11,8 @@ const filters = [
 ]
 
 const statusConfig = {
-  production: { label: 'Production', color: '#34d399' },
-  'en-cours': { label: 'En cours', color: '#f59e0b' },
+  preproduction: { label: 'En Préproduction', color: '#f59e0b' },
+  production: { label: 'En Production', color: '#34d399' },
   archive: { label: 'Archive', color: '#7a8ba8' },
 }
 

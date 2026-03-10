@@ -22,12 +22,14 @@ const skills = {
     { name: 'Git / GitHub', level: 4 },
     { name: 'Vite', level: 4 },
     { name: 'XAMPP', level: 4 },
+    { name: 'VSCode', level: 5},
   ],
   telecom: [
     { name: 'Électronique', level: 4 },
     { name: 'Automatisme / GrafCet', level: 4 },
     { name: 'C++ / Arduino', level: 3 },
     { name: 'Python (embarqué)', level: 3 },
+    { name: 'Infrastructure Industrielle', level: 4 },
   ],
   soft: [
     { name: "Travail d'équipe", level: 5 },

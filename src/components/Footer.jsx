@@ -64,7 +64,7 @@ export default function Footer() {
               </span>
             </button>
             <p className="text-sm leading-relaxed" style={{ color: '#7a8ba8' }}>
-              Responsable IT & Développeur Web Full Stack — Triple compétence IT · Web · Télécom.
+              Responsable IT & Développeur Web Full Stack
             </p>
           </div>
 

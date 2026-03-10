@@ -59,7 +59,7 @@ export default function Hero() {
         className="text-sm max-w-md leading-relaxed mb-8"
         style={{ color: '#7a8ba8' }}
       >
-        Triple compétence IT · Web · Télécom — Basé à Casablanca
+        IT · Web · Télécom — Basé à Casablanca
       </motion.p>
 
       <motion.div

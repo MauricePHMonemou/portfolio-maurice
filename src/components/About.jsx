@@ -26,7 +26,7 @@ export default function About() {
             className="text-xs font-semibold tracking-[3px] uppercase mb-4"
             style={{ color: '#94a3b8' }}
           >
-            À propos
+            À propos de Moi
           </p>
           <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: '#f8fafc' }}>
             Qui suis-je<span style={{ color: '#60a5fa' }}> ?</span>
@@ -43,24 +43,25 @@ export default function About() {
             className="md:col-span-3 space-y-5"
           >
             <p className="leading-relaxed" style={{ color: '#e2e8f0', fontSize: 15 }}>
-              Responsable IT chez <span style={{ color: '#60a5fa', fontWeight: 600 }}>EXCELSA</span> et
-              développeur web full-stack, je possède un parcours atypique qui allie la{' '}
-              <span style={{ color: '#f8fafc', fontWeight: 600 }}>gestion de systèmes d'information</span>,
+              Je suis Responsable IT chez <span style={{ color: '#60a5fa', fontWeight: 600 }}>EXCELSA</span> et
+              développeur web full-stack, je possède une formation diversifiée qui allie la{' '}
+              <span style={{ color: '#f8fafc', fontWeight: 600 }}>gestion des systèmes d'informations</span>,
               le <span style={{ color: '#f8fafc', fontWeight: 600 }}>développement logiciel</span> et{' '}
               l'<span style={{ color: '#f8fafc', fontWeight: 600 }}>informatique industrielle</span>.
             </p>
 
             <p className="leading-relaxed" style={{ color: '#94a3b8', fontSize: 15 }}>
-              Originaire de Guinée et basé à Casablanca, mon parcours débute dans la maintenance
+              Je suis Originaire de la République de Guinée et je suis basé à Casablanca, mon parcours débute dans la maintenance
               informatique chez ApproTECH, se poursuit par un BTS en Télécom (Informatique Industrielle)
-              puis un DTS en Développement Digital (Full Stack) au Complexe de Formation d'Oujda.
+              puis un DTS en Développement Digital (Full Stack) au Complexe de Formation dans les Métiers{' '}
+              des Nouvelles Technologies de l’Information, de l’Offshoring et de l’Électronique d'Oujda.
             </p>
 
             <p className="leading-relaxed" style={{ color: '#94a3b8', fontSize: 15 }}>
               Aujourd'hui, je pilote le projet{' '}
               <span style={{ color: '#60a5fa', fontWeight: 600 }}>EXCELSA-RH</span> — une plateforme
               web sur mesure de gestion des ressources humaines que je conçois et développe intégralement
-              avec Laravel 12, PHP 8.2, Tailwind CSS, Alpine.js, MySQL et Docker.
+              en interne avec Laravel 12, PHP 8.2, Tailwind CSS, Alpine.js, MySQL et Docker.
             </p>
 
             {/* Disponibilité */}
@@ -94,7 +95,7 @@ export default function About() {
                 className="text-xs font-semibold tracking-[2px] uppercase mb-4"
                 style={{ color: '#60a5fa' }}
               >
-                Triple compétence
+                Mes domaines de compétence
               </p>
               <div className="space-y-3">
                 {[
@@ -171,7 +172,7 @@ export default function About() {
                 </span>
               </div>
               <p className="text-sm" style={{ color: '#94a3b8' }}>
-                Plateforme web sur mesure de gestion des ressources humaines
+                Une Plateforme web sur mesure de gestion des ressources humaines
               </p>
             </div>
           </div>
@@ -193,8 +194,7 @@ export default function About() {
           </div>
 
           <p className="mt-4 text-sm leading-relaxed" style={{ color: '#7a8ba8' }}>
-            Gestion complète des employés, workflows RH (demandes, missions, évaluations),
-            notifications email + in-app, sécurité avancée — conçu et développé en autonomie.
+            Gestion complète des employés, workflows RH — conçu et développé en autonomie.
           </p>
         </motion.div>
       </div>

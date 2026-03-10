@@ -68,7 +68,7 @@ export default function Contact() {
             Travaillons ensemble<span style={{ color: '#60a5fa' }}>.</span>
           </h2>
           <p className="text-sm max-w-md mx-auto" style={{ color: '#7a8ba8' }}>
-            Une question, une opportunité ou simplement envie d'échanger ? N'hésitez pas.
+            Pour une question, une opportunité ou simplement envie d'échanger ? N'hésitez pas à me contacter.
           </p>
         </motion.div>
 
@@ -181,7 +181,7 @@ export default function Contact() {
               }}
             >
               <p className="text-xs font-semibold tracking-[2px] uppercase" style={{ color: '#60a5fa' }}>
-                Me retrouver
+                Retrouver Moi Sur:
               </p>
 
               {[
