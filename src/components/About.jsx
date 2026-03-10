@@ -51,8 +51,10 @@ export default function About() {
             </p>
 
             <p className="leading-relaxed" style={{ color: '#94a3b8', fontSize: 15 }}>
-              Je suis Originaire de la République de Guinée et je suis basé à Casablanca, mon parcours débute dans la maintenance
-              informatique chez ApproTECH, se poursuit par un BTS en Télécom (Informatique Industrielle)
+              Je suis Originaire de la République de Guinée et actuellement basé à Casablanca, 
+              j'ai débuté mon parcours dans la maintenance informatique chez ApproTECH, 
+              avant de poursuivre avec un BTS en Télécoms (Informatique Industrielle){' '}
+              à l'École Nationale des Postes et Télécommunications de Kipé,{' '}
               puis un DTS en Développement Digital (Full Stack) au Complexe de Formation dans les Métiers{' '}
               des Nouvelles Technologies de l’Information, de l’Offshoring et de l’Électronique d'Oujda.
             </p>
@@ -166,9 +168,9 @@ export default function About() {
                 </h3>
                 <span
                   className="text-xs font-semibold px-2.5 py-0.5 rounded-md"
-                  style={{ background: 'rgba(52,211,153,0.1)', color: '#34d399' }}
+                  style={{ background: 'rgba(52,211,153,0.1)', color: '#f59e0b' }}
                 >
-                  Production
+                  Préproduction
                 </span>
               </div>
               <p className="text-sm" style={{ color: '#94a3b8' }}>
