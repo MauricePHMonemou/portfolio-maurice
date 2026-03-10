@@ -54,9 +54,9 @@ export default function About() {
               Je suis Originaire de la République de Guinée et actuellement basé à Casablanca, 
               j'ai débuté mon parcours dans la maintenance informatique chez ApproTECH, 
               avant de poursuivre avec un BTS en Télécoms (Informatique Industrielle){' '}
-              à l'École Nationale des Postes et Télécommunications de Kipé,{' '}
+              à l'École Nationale des Postes et Télécommunications de Kipé - Conakry/Guinée,{' '}
               puis un DTS en Développement Digital (Full Stack) au Complexe de Formation dans les Métiers{' '}
-              des Nouvelles Technologies de l’Information, de l’Offshoring et de l’Électronique d'Oujda.
+              des Nouvelles Technologies de l’Information, de l’Offshoring et de l’Électronique d'Oujda - Maroc.
             </p>
 
             <p className="leading-relaxed" style={{ color: '#94a3b8', fontSize: 15 }}>
