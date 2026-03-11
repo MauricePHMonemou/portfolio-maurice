@@ -14,7 +14,7 @@ const projects = [
   {
     id: 2,
     name: 'App Réclamation Notes',
-    description: 'Application web de gestion des réclamations de notes étudiantes.',
+    description: 'Application web de gestion des réclamations de notes des étudiantes.',
     longDescription: 'Conçue lors de mon stage à l\'ENCG d\'Oujda, cette application permet de faciliter et d\'automatiser le processus de réclamation des notes des étudiants. Projet complet de la conception au déploiement.',
     tech: ['PHP', 'MySQL', 'HTML/CSS', 'JavaScript'],
     category: 'full-stack',
@@ -26,8 +26,8 @@ const projects = [
   {
     id: 3,
     name: 'Portfolio Personnel',
-    description: 'Ce SPA(Single Page Application) React avec animation constellation interactive et thème Deep Space.',
-    longDescription: 'J\'ai developpé ce projet de portfolio — Single Page Application en vue de mettre en valeur mes cmopétences académique et professionnelle. Le projet est développée avec React 18, Vite, Tailwind CSS et Framer Motion. Animation constellation Canvas 2D interactive, design glassmorphism, formulaire EmailJS, déployé sur Vercel avec CI/CD automatique.',
+    description: 'Ce SPA(Single Page Application) React avec l\'animation constellation interactive et thème Deep Space.',
+    longDescription: 'J\'ai développé ce projet de portfolio — SPA en vue de mettre en valeur mes compétences académique et professionnelle. Le projet est développé avec React 18, Vite, Tailwind CSS et Framer Motion. Animation constellation Canvas 2D interactive, design glassmorphism, formulaire EmailJS, déployé sur Vercel avec CI/CD automatique.',
     tech: ['React 18', 'Vite', 'Tailwind CSS', 'Framer Motion', 'Canvas 2D', 'EmailJS'],
     category: 'frontend',
     status: 'production',
