@@ -107,7 +107,9 @@ export default function Contact() {
               />
             </div>
 
+            <label htmlFor="subject" className="sr-only">Sujet du message</label>
             <select
+              id='subject'
               name="subject"
               required
               value={formData.subject}
