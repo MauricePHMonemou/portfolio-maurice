@@ -244,7 +244,8 @@ export default function Contact() {
             </button>
 
             <p className="text-sm text-center" style={{ color: '#7a8ba8' }}>
-              +212 774 423 910
+              Tel: +212 774 423 910 <br />
+              WhatsApp: +224 622 285 742
             </p>
           </motion.div>
         </div>
