@@ -1,5 +1,14 @@
 const formation = [
   {
+    id: 0,
+    diplome: 'Licence Fondamentale Développement Informatique',
+    option: '1ère année',
+    etablissement: 'Faculté des Sciences — Université Hassan 2',
+    lieu: 'Casablanca, Maroc',
+    periode: '09/2025 — En cours',
+    enCours: true,
+  },
+  {
     id: 1,
     diplome: 'DTS Développement Digital',
     option: 'Option Full Stack',

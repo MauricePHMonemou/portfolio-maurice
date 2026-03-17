@@ -49,9 +49,19 @@ export default function Formation() {
                   <GraduationCap size={20} style={{ color: '#60a5fa' }} />
                 </div>
                 <div>
-                  <span className="text-xs font-mono" style={{ color: '#60a5fa' }}>
-                    {f.periode}
-                  </span>
+                  <div className="flex items-center gap-2 flex-wrap">
+                    <span className="text-xs font-mono" style={{ color: '#60a5fa' }}>
+                      {f.periode}
+                    </span>
+                    {f.enCours && (
+                      <span
+                        className="text-xs font-semibold px-2 py-0.5 rounded-md"
+                        style={{ background: 'rgba(52,211,153,0.12)', color: '#34d399' }}
+                      >
+                        En cours
+                      </span>
+                    )}
+                  </div>
                   <h3 className="text-base font-bold mt-1" style={{ color: '#f8fafc' }}>
                     {f.diplome}
                   </h3>

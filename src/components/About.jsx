@@ -50,8 +50,8 @@ export default function About() {
               Je suis un jeune venu de très loin avec une force pour braver les épreuves, 
               je suis un jeune curieux de toujours chercher à savoir, 
               je suis un jeune imparfait qui se base sur ses erreurs pour apprendre à se perfectionner en vue de s'armer et 
-              d'aiguiser son esprit pour mieux répondre aux attentes technologiques de notre ère en vue d'ajouter son grain 
-              de sel à l'édifice, qui va rendre le monde meilleur et c'est avec cet esprit d'apprendre, de se surpasser positivement  
+              d'aiguiser son esprit pour mieux répondre aux attentes technologiques de notre ère, afin d'ajouter son grain 
+              de sel à l'édifice, qui va rendre le monde meilleur et c'est avec cet esprit d'apprendre et de me surpasser positivement  
               que j'ai découvert le domaine des NTIC auquel je ne peux plus m'en passer.
             </p>
 
@@ -110,9 +110,11 @@ export default function About() {
             </p>
 
             <p className="leading-relaxed" style={{ color: '#e2e8f0', fontSize: 15 }}>
-              Je suis actuellement Responsable IT chez{' '}<span style={{ color: '#60a5fa', fontWeight: 600 }}>EXCELSA</span>.{' '}
+              J'interviens actuellement en tant que prestataire freelance chez{' '}<span style={{ color: '#60a5fa', fontWeight: 600 }}>EXCELSA</span>{' '}
+              occupant la fonction de {' '}<span style={{ color: '#60a5fa', fontWeight: 600 }}>Responsable IT / Développeur web.</span> <br />
               Mon quotidien, c'est un peu l'art de jongler entre plusieurs mondes : le matin je peux 
-              être en train de résoudre un incident réseau et l'après-midi me retrouver à implémenter de nouvelles fonctionnalités. 
+              être en train de suivre un cours à la faculté des sciences de U.Hassan 2 de Casablanca{' '}
+              ou en train de résoudre un incident réseau et l'après-midi me retrouver à implémenter de nouvelles fonctionnalités et vice versa. <br />
               Ce mélange entre être <span style={{ color: '#f8fafc', fontWeight: 600 }}>Responsable IT</span>, ou être{' '}
               <span style={{ color: '#f8fafc', fontWeight: 600 }}>Développeur web</span> ou encore faire de la{' '}
               <span style={{ color: '#f8fafc', fontWeight: 600 }}>Maintenance</span>,
