@@ -46,13 +46,12 @@ export default function About() {
           >
             {/* Partie visible */}
             <p className="leading-relaxed" style={{ color: '#94a3b8', fontSize: 15 }}>
-              Je suis Maurice MONEMOU, Originaire de la République de Guinée, résidant actuellement à Casablanca.<br />
-              Je suis un jeune venu de très loin avec une force pour braver les épreuves, 
-              je suis un jeune curieux de toujours chercher à savoir, 
-              je suis un jeune imparfait qui se base sur ses erreurs pour apprendre à se perfectionner en vue de s'armer et 
-              d'aiguiser son esprit pour mieux répondre aux attentes technologiques de notre ère, afin d'ajouter son grain 
-              de sel à l'édifice, qui va rendre le monde meilleur et c'est avec cet esprit d'apprendre et de me surpasser positivement  
-              que j'ai découvert le domaine des NTIC auquel je ne peux plus m'en passer.
+              Je suis Maurice MONEMOU, originaire de la République de Guinée, résidant actuellement à Casablanca.<br />
+              Je suis un jeune venu de loin, doté d'une force pour braver les épreuves et d'une curiosité insatiable. 
+              Je suis conscient de mes imperfections, mais je m'appuie sur mes erreurs pour me perfectionner. 
+              Mon objectif est d'aiguiser mon esprit afin de mieux répondre aux défis technologiques de notre ère 
+              et d'apporter ma pierre à l'édifice pour rendre le monde meilleur. C'est avec cette volonté d'apprendre 
+              et de me surpasser que j'ai découvert le domaine des NTIC, dont je ne peux plus me passer.
             </p>
 
             {/* Partie cachée */}
@@ -66,21 +65,28 @@ export default function About() {
                   className="overflow-hidden space-y-5"
                 >
                   <p className="leading-relaxed" style={{ color: '#94a3b8', fontSize: 15 }}>
-                    Tout commence dans mon pays la Guinée lorsque j'ai entre 8 à 10 ans, je découvre pendant mes jeux que je peux bricoler 
-                    de vieilles carcasses de radios ou tout autres appareils contenant des fils et composants électroniques. 
-                    Bien sûr à l'époque je ne connais pas exactement c'est quoi un composant électronique, pour moi et mes copains ce qui 
-                    nous intéresse ce sont les effets que ça produit lorsqu'on les met ensemble ces composants et ces fils, 
-                    on fabrique des voiturettes et plein d'autres jeux, bref tout ce qui passe dans nos têtes tant que ça nous amuse et 
-                    toutes ces choses me plaisent beaucoup et comme je vous ai dit plus haut je suis curieux, prêt à tout pour comprendre ce 
-                    que mon cerveau n'arrive pas à interpréter. C'est de ces jeux que je commence à poser des questions à mes grands frères, 
-                    à mes professeurs surtout lors des cours de physique, de chimie ou de mathématiques et je découvre qu'il y a des métiers 
-                    consacrés à tout ce que je fais comme jeux. Alors là je suis totalement insaisissable car je veux tout de suite connaître 
-                    les matières qui permettent de faire ces métiers après ces études. Vous vous direz sûrement mais en quoi est-ce que tout cela 
-                    a un lien avec le développement Web ou l'IT ? Et bien je vous dis tout simplement que j'ai une formation atypique…
+                    Tout commence dans mon pays, la Guinée. Entre mes 8 et 10 ans, je découvre pendant mes jeux que je peux bricoler 
+                    de vieilles carcasses de radios, ou tout autre appareil contenant des fils et des composants électroniques. 
+                    Bien sûr, à l'époque, je ne sais pas exactement ce qu'est un composant électronique !<br /> Avec mes copains, ce qui 
+                    nous intéresse, ce sont les effets produits lorsqu'on assemble ces composants et ces fils. <br /> 
+                    On fabrique des voiturettes et plein d'autres jeux, bref, tout ce qui nous passe par la tête tant que ça nous amuse, 
+                    toutes ces choses me plaisent beaucoup. <br />
+                    Comme je vous l'ai dit plus haut je suis de nature curieuse, prêt à tout pour comprendre ce 
+                    que mon cerveau n'arrive pas à interpréter. <br />
+                    C'est à partir de ces jeux que je commence à poser des questions à mes grands frères, 
+                    à mes professeurs surtout lors des cours de physique, de chimie ou de mathématiques. <br />
+                    Je découvre alors qu'il existe des métiers consacrés à ce qui n'était pour moi qu'un jeu. 
+                    Je suis captivé : je veux tout de suite connaître les études qui permettent d'exercer ces professions. <br />
+                    Vous vous direz sûrement mais en quoi est-ce que tout cela a un lien avec le développement Web ou l'IT ? <br />
+                    C'est simple : j'ai une formation atypique, forgée par la pratique et la curiosité. 
+                    Mon histoire est celle d'un enfant passionné devenu un professionnel de la Tech, 
+                    toujours motivé par l'apprentissage et l'amélioration continue.
+                    Et peut-être qu'un jour j'aurai l'occasion de vous raconter le reste de mon histoire !
                   </p>
                   <p className="leading-relaxed" style={{ color: '#94a3b8', fontSize: 15 }}>
-                    Alors voilà un peu qui je suis, l'histoire est longue car c'est mon histoire, l'histoire d'un enfant devenu adulte 
-                    aujourd'hui et cette histoire suit son cours car je suis sur le chemin de la perfection.
+                    Alors voilà un peu qui je suis. C'est l'histoire d'un enfant devenu adulte 
+                    aujourd'hui avec la même motivation d'apprendre, 
+                    et cette histoire suit son cours car je suis toujours en quête d'amélioration continue.
                   </p>
                 </motion.div>
               )}
