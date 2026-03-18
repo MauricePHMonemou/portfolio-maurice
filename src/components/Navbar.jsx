@@ -76,9 +76,17 @@ export default function Navbar() {
                 objectPosition: 'center 35%',
               }}
             />
-            <span className="text-[#f8fafc] font-bold text-xl tracking-tight">
-              Maurice<span className="text-[#60a5fa]">.</span>
-            </span>
+            <div className="flex flex-col leading-none">
+              <span className="text-[#f8fafc] font-bold text-xl tracking-tight">
+                Maurice<span className="text-[#60a5fa]">.</span>
+              </span>
+              <span
+                className="text-[10px] font-semibold tracking-wide mt-0.5"
+                style={{ color: '#60a5fa' }}
+              >
+                Travail&nbsp;•&nbsp;Constance&nbsp;•&nbsp;Am&#233;lioration
+              </span>
+            </div>
           </button>
 
           <div className="hidden md:flex items-center gap-1">

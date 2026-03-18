@@ -48,8 +48,9 @@ export default function About() {
             <p className="leading-relaxed" style={{ color: '#94a3b8', fontSize: 15 }}>
               Je suis Maurice MONEMOU, originaire de la République de Guinée, résidant actuellement à Casablanca.<br />
               Je suis un jeune venu de loin, doté d'une force pour braver les épreuves et d'une curiosité insatiable. 
-              Je suis conscient de mes imperfections, mais je m'appuie sur mes erreurs pour me perfectionner. 
-              Mon objectif est d'aiguiser mon esprit afin de mieux répondre aux défis technologiques de notre ère 
+              Je suis conscient de mes défauts et mes imperfections, mais je m'appuie mes erreurs pour mieux me perfectionner.
+              Et ma devise le montre clairement:{' '}<span style={{ color: '#60a5fa', fontWeight: 800 }}>Travail • Constance • Amélioration</span>.<br />
+              Mon objectif est de consolider mes connaissances et d'aiguiser mon esprit afin de mieux répondre aux défis technologiques de notre ère 
               et d'apporter ma pierre à l'édifice pour rendre le monde meilleur. C'est avec cette volonté d'apprendre 
               et de me surpasser que j'ai découvert le domaine des NTIC, dont je ne peux plus me passer.
             </p>
@@ -79,9 +80,10 @@ export default function About() {
                     Je suis captivé : je veux tout de suite connaître les études qui permettent d'exercer ces professions. <br />
                     Vous vous direz sûrement mais en quoi est-ce que tout cela a un lien avec le développement Web ou l'IT ? <br />
                     C'est simple : j'ai une formation atypique, forgée par la pratique et la curiosité. 
-                    Mon histoire est celle d'un enfant passionné devenu un professionnel de la Tech, 
-                    toujours motivé par l'apprentissage et l'amélioration continue.
-                    Et peut-être qu'un jour j'aurai l'occasion de vous raconter le reste de mon histoire !
+                    Mon parcours et mon histoire sont celle d'un jeune enfant fasciné par la Technologie,
+                    et qui en a fait sa passion. Aujourd'hui je suis professionnel de la Tech, et je garde toujours les mêmes motivations 
+                    pour l'apprentissage et l'amélioration continue de mes compétences. <br />
+                    Et peut-être qu'un jour, nous aurons l'occasion pour que puisse vous raconter la suite de mon histoire !
                   </p>
                   <p className="leading-relaxed" style={{ color: '#94a3b8', fontSize: 15 }}>
                     Alors voilà un peu qui je suis. C'est l'histoire d'un enfant devenu adulte 

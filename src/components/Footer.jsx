@@ -64,7 +64,13 @@ export default function Footer() {
               </span>
             </button>
             <p className="text-sm leading-relaxed" style={{ color: '#7a8ba8' }}>
-              Responsable IT & Développeur Web Full Stack
+              Responsable IT &amp; D&#233;veloppeur Web Full Stack
+            </p>
+            <p
+              className="text-[12px] font-bold mt-2 tracking-wide text-center"
+              style={{ color: '#60a5fa' }}
+            >
+              Travail&nbsp;•&nbsp;Constance&nbsp;•&nbsp;Am&#233;lioration
             </p>
           </div>
 
