@@ -11,9 +11,9 @@ const WhatsAppIcon = ({ size = 16, style }) => (
   </svg>
 )
 
-const EMAILJS_SERVICE = 'service_e4lpbvv'
-const EMAILJS_TEMPLATE = 'template_46l4a7b'
-const EMAILJS_KEY = 'evFpMuwQvSsmrRnO3'
+const EMAILJS_SERVICE = import.meta.env.VITE_EMAILJS_SERVICE
+const EMAILJS_TEMPLATE = import.meta.env.VITE_EMAILJS_TEMPLATE
+const EMAILJS_KEY = import.meta.env.VITE_EMAILJS_KEY
 
 export default function Contact() {
   const [ref, isInView] = useInView({ threshold: 0.05 })
@@ -28,6 +28,11 @@ export default function Contact() {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
+
+    // Honeypot anti-bot : ce champ est invisible pour les humains. S'il est
+    // rempli, c'est un bot → on abandonne silencieusement sans envoyer de mail.
+    if (formRef.current?._gotcha?.value) return
+
     setLoading(true)
     setStatus(null)
 
@@ -48,7 +53,7 @@ export default function Contact() {
     width: '100%',
     padding: '12px 16px',
     borderRadius: 10,
-    border: '1px solid rgba(96,165,250,0.1)',
+    border: '1px solid rgba(96,165,250,0.3)',
     background: 'rgba(10,14,26,0.5)',
     color: '#e2e8f0',
     fontSize: 14,
@@ -88,6 +93,16 @@ export default function Contact() {
             onSubmit={handleSubmit}
             className="md:col-span-3 space-y-4"
           >
+            {/* Honeypot anti-bot — invisible pour les humains, souvent rempli par les bots */}
+            <input
+              type="text"
+              name="_gotcha"
+              tabIndex={-1}
+              autoComplete="off"
+              aria-hidden="true"
+              style={{ position: 'absolute', left: '-9999px', width: 1, height: 1, opacity: 0 }}
+            />
+
             <div className="grid grid-cols-2 gap-4">
               <input
                 type="text"
@@ -97,8 +112,8 @@ export default function Contact() {
                 value={formData.from_name}
                 onChange={handleChange}
                 style={inputStyle}
-                onFocus={(e) => e.target.style.borderColor = 'rgba(96,165,250,0.4)'}
-                onBlur={(e) => e.target.style.borderColor = 'rgba(96,165,250,0.1)'}
+                onFocus={(e) => e.target.style.borderColor = 'rgba(96,165,250,0.55)'}
+                onBlur={(e) => e.target.style.borderColor = 'rgba(96,165,250,0.3)'}
               />
               <input
                 type="email"
@@ -108,8 +123,8 @@ export default function Contact() {
                 value={formData.from_email}
                 onChange={handleChange}
                 style={inputStyle}
-                onFocus={(e) => e.target.style.borderColor = 'rgba(96,165,250,0.4)'}
-                onBlur={(e) => e.target.style.borderColor = 'rgba(96,165,250,0.1)'}
+                onFocus={(e) => e.target.style.borderColor = 'rgba(96,165,250,0.55)'}
+                onBlur={(e) => e.target.style.borderColor = 'rgba(96,165,250,0.3)'}
               />
             </div>
 
@@ -121,8 +136,8 @@ export default function Contact() {
               value={formData.subject}
               onChange={handleChange}
               style={{ ...inputStyle, cursor: 'pointer' }}
-              onFocus={(e) => e.target.style.borderColor = 'rgba(96,165,250,0.4)'}
-              onBlur={(e) => e.target.style.borderColor = 'rgba(96,165,250,0.1)'}
+              onFocus={(e) => e.target.style.borderColor = 'rgba(96,165,250,0.55)'}
+              onBlur={(e) => e.target.style.borderColor = 'rgba(96,165,250,0.3)'}
             >
               <option value="" style={{ background: '#0a0e1a' }}>Sujet du message</option>
               <option value="Opportunité d'emploi" style={{ background: '#0a0e1a' }}>Opportunité d'emploi</option>
@@ -139,8 +154,8 @@ export default function Contact() {
               value={formData.message}
               onChange={handleChange}
               style={{ ...inputStyle, resize: 'vertical' }}
-              onFocus={(e) => e.target.style.borderColor = 'rgba(96,165,250,0.4)'}
-              onBlur={(e) => e.target.style.borderColor = 'rgba(96,165,250,0.1)'}
+              onFocus={(e) => e.target.style.borderColor = 'rgba(96,165,250,0.55)'}
+              onBlur={(e) => e.target.style.borderColor = 'rgba(96,165,250,0.3)'}
             />
 
             <button
