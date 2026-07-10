@@ -48,9 +48,9 @@ export default function About() {
             <p className="leading-relaxed" style={{ color: '#94a3b8', fontSize: 15 }}>
               Je suis Maurice MONEMOU, originaire de la République de Guinée, résidant actuellement à Casablanca.<br />
               Je suis un jeune venu de loin, doté d'une force pour braver les épreuves et d'une curiosité insatiable. 
-              Je suis conscient de mes défauts et mes imperfections, mais je m'appuie mes erreurs pour mieux me perfectionner.
+              Je suis conscient de mes défauts et mes imperfections, mais je m'appuie sur mes erreurs pour mieux me perfectionner.
               Et ma devise le montre clairement:{' '}<span style={{ color: '#60a5fa', fontWeight: 800 }}>Travail • Constance • Amélioration</span>.<br />
-              Mon objectif est de consolider mes connaissances et d'aiguiser mon esprit afin de mieux répondre aux défis technologiques de notre ère 
+              Mon objectif est de consolider mes connaissances et d'aiguiser mon esprit pour mieux répondre aux défis technologiques de notre ère 
               et d'apporter ma pierre à l'édifice pour rendre le monde meilleur. C'est avec cette volonté d'apprendre 
               et de me surpasser que j'ai découvert le domaine des NTIC, dont je ne peux plus me passer.
             </p>
@@ -68,17 +68,17 @@ export default function About() {
                   <p className="leading-relaxed" style={{ color: '#94a3b8', fontSize: 15 }}>
                     Tout commence dans mon pays, la Guinée. Entre mes 8 et 10 ans, je découvre pendant mes jeux que je peux bricoler 
                     de vieilles carcasses de radios, ou tout autre appareil contenant des fils et des composants électroniques. 
-                    Bien sûr, à l'époque, je ne sais pas exactement ce qu'est un composant électronique !<br /> Avec mes copains, ce qui 
-                    nous intéresse, ce sont les effets produits lorsqu'on assemble ces composants et ces fils. <br /> 
-                    On fabrique des voiturettes et plein d'autres jeux, bref, tout ce qui nous passe par la tête tant que ça nous amuse, 
-                    toutes ces choses me plaisent beaucoup. <br />
+                    Bien sûr, à l'époque, je ne sais pas exactement ce que c'est un composant électronique !<br /> Avec mes copains, ce qui 
+                    nous intéresse, ce sont les effets produits lorsqu'on assemble ces composants et ces fils, <br /> 
+                    Et qu'on fabrique des voiturettes et plein d'autres jeux, bref, tout ce qui nous passe par la tête tant que ça nous amuse, 
+                    et toutes ces choses me plaisent beaucoup et m'intrigues. <br />
                     Comme je vous l'ai dit plus haut je suis de nature curieuse, prêt à tout pour comprendre ce 
                     que mon cerveau n'arrive pas à interpréter. <br />
                     C'est à partir de ces jeux que je commence à poser des questions à mes grands frères, 
                     à mes professeurs surtout lors des cours de physique, de chimie ou de mathématiques. <br />
                     Je découvre alors qu'il existe des métiers consacrés à ce qui n'était pour moi qu'un jeu. 
                     Je suis captivé : je veux tout de suite connaître les études qui permettent d'exercer ces professions. <br />
-                    Vous vous direz sûrement mais en quoi est-ce que tout cela a un lien avec le développement Web ou l'IT ? <br />
+                    Vous vous direz sûrement mais en quoi est-ce que tout cela sont lié au métier de développeur Web ou de l'IT ? <br />
                     C'est simple : j'ai une formation atypique, forgée par la pratique et la curiosité. 
                     Mon parcours et mon histoire sont celle d'un jeune enfant fasciné par la Technologie,
                     et qui en a fait sa passion. Aujourd'hui je suis professionnel de la Tech, et je garde toujours les mêmes motivations 
@@ -126,14 +126,14 @@ export default function About() {
               Ce mélange entre être <span style={{ color: '#f8fafc', fontWeight: 600 }}>Responsable IT</span>, ou être{' '}
               <span style={{ color: '#f8fafc', fontWeight: 600 }}>Développeur web</span> ou encore faire de la{' '}
               <span style={{ color: '#f8fafc', fontWeight: 600 }}>Maintenance</span>,
-              n'est pas le fruit du hasard, c'est le reflet d'un parcours qui m'a exposé autant 
-              aux infrastructures systèmes qu'aux codes et à l'électronique industrielle.
+              n'est pas le fruit du hasard, c'est le reflet d'un parcours qui m'a exposé tant 
+              aux infrastructures systèmes qu'aux codes et à l'électronique et le Réseau.
             </p>
 
             <p className="leading-relaxed" style={{ color: '#94a3b8', fontSize: 15 }}>
               Aujourd'hui, le projet phare que je dirige est le projet{' '}
               <span style={{ color: '#60a5fa', fontWeight: 600 }}>EXCELSA-RH</span>. <br /> C'est une plateforme
-              web sur mesure de gestion des ressources humaines que je conçois et développe intégralement
+              web sur mesure, conçu pour faciliter la gestion des ressources humaines de l'entreprise. <br /> Je conçois cette solution intégralement
               en interne avec Laravel 12, PHP 8.2, Tailwind CSS, Alpine.js, MySQL et Docker.
             </p>
 
@@ -238,13 +238,13 @@ export default function About() {
                 </h3>
                 <span
                   className="text-xs font-semibold px-2.5 py-0.5 rounded-md"
-                  style={{ background: 'rgba(52,211,153,0.1)', color: '#f59e0b' }}
+                  style={{ background: 'rgba(52,211,153,0.1)', color: '#34d399' }}
                 >
-                  Préproduction
+                  Production
                 </span>
               </div>
               <p className="text-sm" style={{ color: '#94a3b8' }}>
-                Une Plateforme web sur mesure de gestion des ressources humaines
+                Une Plateforme web sur mesure, conçu pour faciliter la gestion des ressources humaines
               </p>
             </div>
           </div>

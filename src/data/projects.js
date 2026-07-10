@@ -6,9 +6,9 @@ const projects = [
     longDescription: 'Le projet EXCELSA-RH couvre la gestion complète des employés (comptes, profils, rôles hiérarchiques), workflows RH (demandes, missions, évaluations avec cycle de validation), notifications email asynchrones + in-app, sécurité avancée (authentification, timeout de session, envoi sécurisé des identifiants). Conçu et développé intégralement en autonomie.',
     tech: ['Laravel 12', 'PHP 8.2', 'Tailwind CSS', 'Alpine.js 3', 'MySQL', 'Docker', 'Blade', 'Vite 7'],
     category: 'full-stack',
-    status: 'preproduction',
+    status: 'production',
     github: '',
-    demo: '',
+    demo: 'https://excelsa-rh.com/',
     featured: true,
   },
   {
