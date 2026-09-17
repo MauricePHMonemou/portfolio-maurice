@@ -12,7 +12,7 @@ export default async function generateCV() {
       reader.onloadend = () => resolve(reader.result)
       reader.readAsDataURL(blob)
     })
-  } catch (e) {
+  } catch {
     profileBase64 = null
   }
   const doc = new jsPDF({ unit: 'mm', format: 'a4' })

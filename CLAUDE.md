@@ -57,6 +57,7 @@ Animation « constellation » en Canvas 2D, positionnée en fond fixe. Le reste 
 - Thème sombre « Deep Space » fixe (fond `#0a0e1a`, accent bleu `#60a5fa`), défini dans [src/index.css](src/index.css). Police `Space Grotesk`.
 - Le style repose beaucoup sur des **styles inline** (`style={{...}}`) avec des couleurs codées en dur (rgba glassmorphism, gradients), en complément des classes Tailwind. C'est le pattern établi — le suivre pour rester cohérent plutôt que d'extraire un système de thème.
 - Règle ESLint notable : `no-unused-vars` ignore les identifiants en `^[A-Z_]` (composants et constantes).
+- ESLint 9 ne voit pas `<motion.div>` comme une utilisation de `motion` : la règle locale `local/jsx-uses-vars`, définie dans [eslint.config.js](eslint.config.js), corrige ça sans dépendance (équivalent de `react/jsx-uses-vars`). Ne pas la retirer.
 
 ## Formulaire de contact (EmailJS)
 
