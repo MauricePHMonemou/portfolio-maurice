@@ -49,6 +49,44 @@ const projects = [
     featured: true,
   },
   {
+    id: 5,
+    name: 'SAMI Tracker',
+    description: 'PWA de suivi d\'entraînement pensée pour la salle de sport — utilisable hors connexion, installable sur l\'écran d\'accueil.',
+    longDescription: [
+      'SAMI Tracker est une application de suivi d\'entraînement née d\'un besoin réel : un programme de musculation de douze semaines à tenir, un carnet papier qui se perd, et une salle de sport où l\'on a rarement les deux mains libres.',
+      'Chaque utilisateur compose son propre programme — séances, exercices, séries — et choisit comment chaque exercice se mesure : charge et répétitions, temps tenu, distance, poids du corps, ou l\'une des sept unités disponibles. Un développé couché ne se note pas comme une planche, et une course ne se note pas en kilogrammes.',
+      'Pendant la séance, un minuteur enchaîne l\'effort et le repos. Il mesure le temps réellement tenu plutôt que de demander à quelqu\'un en pleine planche de se souvenir de la seconde où il a lâché. Le décompte s\'appuie sur un horodatage absolu — il reste juste même quand le téléphone passe en veille dans une poche — et signale la fin par une vibration et un bip, indispensable quand l\'écran est posé sur un banc.',
+      'L\'historique se consulte par jour, semaine ou mois, avec un rapport prévisualisable puis imprimable ou téléchargeable. Des courbes de progression, une par exercice, montrent l\'évolution réelle plutôt qu\'un simple journal.',
+      'Zéro dépendance superflue : pas de bibliothèque de composants, pas de librairie de graphiques, pas de générateur PDF. Les courbes sont du SVG calculé, le rapport passe par le moteur d\'impression du navigateur. Résultat : 103 Ko de JavaScript partagé.',
+      'Le projet est en production et utilisé quotidiennement. Les retours des utilisateurs continuent d\'orienter les évolutions.',
+    ],
+    // highlights : points de conception affichés dans la modale
+    highlightsTitle: 'Ce qui a guidé la conception',
+    highlights: [
+      { name: 'L\'accessibilité comme point de départ', description: 'la version d\'origine avait des champs de saisie au contraste de 1,06:1 — littéralement invisibles. Le design system impose un plancher de 3:1 sur toute bordure de champ, des cibles tactiles de 44 px et une taille de texte minimale de 12 px.' },
+      { name: 'Une contrainte médicale intégrée au produit', description: 'le programme est construit autour d\'une fragilité d\'épaule. Les consignes de sécurité sont des données de première classe, jamais du texte décoratif — et l\'application refuse délibérément de rythmer les répétitions : pousser à accélérer sous charge serait dangereux.' },
+      { name: 'Le hors-ligne comme cas nominal', description: 'le service worker met en cache la coquille de l\'application, jamais les données personnelles. L\'application se lance sans réseau et affiche un état explicite plutôt qu\'un écran de chargement figé.' },
+      { name: 'Une sécurité non négociable', description: 'inscription par code d\'invitation, validation des adresses e-mail par vérification des enregistrements MX, et cloisonnement total des données par Row Level Security : aucun compte privilégié, chacun ne voit que les siennes.' },
+      { name: 'Une couche de stockage abstraite', description: 'aucun composant n\'appelle la base directement. Toute l\'interface se développe et se teste sans identifiants, et l\'adaptateur de production se substitue au local sans toucher une ligne de composant.' },
+    ],
+    // tech : liste à plat pour la carte (les 4 premiers tags sont affichés, puis +N)
+    tech: ['Next.js 15', 'React 19', 'TypeScript', 'Tailwind CSS v4', 'Supabase', 'PostgreSQL', 'PWA', 'Vercel'],
+    // techGroups : stack groupée affichée dans la modale
+    techGroups: [
+      { label: 'Front-end', items: ['Next.js 15 (App Router)', 'React 19', 'TypeScript strict'] },
+      { label: 'Styles', items: ['Tailwind CSS v4 (design system sur mesure, jetons @theme)'] },
+      { label: 'Back-end', items: ['Supabase', 'PostgreSQL', 'Auth', 'Row Level Security'] },
+      { label: 'Mobile', items: ['PWA installable', 'Manifeste et service worker écrits à la main', 'Mode hors-ligne'] },
+      { label: 'Hébergement', items: ['Vercel (CI/CD depuis GitHub)', 'Tâche planifiée de maintien en vie'] },
+    ],
+    category: 'full-stack',
+    status: 'production',
+    github: '',
+    demo: 'https://sami-tracker.vercel.app/connexion',
+    demoLabel: 'Voir en ligne (accès restreint)',
+    featured: true,
+  },
+  {
     id: 2,
     name: 'App Réclamation Notes',
     description: 'Application web de gestion des réclamations de notes des étudiantes.',

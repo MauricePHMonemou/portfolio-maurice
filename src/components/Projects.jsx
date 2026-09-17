@@ -101,6 +101,22 @@ function ProjectModal({ project, onClose }) {
           </div>
         )}
 
+        {/* Points de conception */}
+        {project.highlights && (
+          <>
+            <p className="text-xs font-semibold tracking-[2px] uppercase mb-3" style={{ color: '#60a5fa' }}>
+              {project.highlightsTitle ?? 'Points clés'}
+            </p>
+            <ul className="space-y-2 mb-5">
+              {project.highlights.map((h) => (
+                <li key={h.name} className="text-sm leading-relaxed" style={{ color: '#7a8ba8' }}>
+                  <span className="font-semibold" style={{ color: '#f8fafc' }}>{h.name}</span> : {h.description}
+                </li>
+              ))}
+            </ul>
+          </>
+        )}
+
         {/* Stack technique (groupée par catégorie si techGroups est défini) */}
         <p className="text-xs font-semibold tracking-[2px] uppercase mb-3" style={{ color: '#60a5fa' }}>
           Stack technique
@@ -153,7 +169,7 @@ function ProjectModal({ project, onClose }) {
               className="flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium text-white"
               style={{ background: 'linear-gradient(135deg, #3b82f6, #2563eb)' }}
             >
-              <ExternalLink size={15} /> Démo live
+              <ExternalLink size={15} /> {project.demoLabel ?? 'Démo live'}
             </a>
           )}
           {!project.demo && project.demoOnRequest && (
