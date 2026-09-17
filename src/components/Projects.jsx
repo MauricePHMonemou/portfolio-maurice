@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import useInView from '../hooks/useInView'
 import projects from '../data/projects'
-import { ExternalLink, Github, Star, X } from 'lucide-react'
+import { ExternalLink, Github, MessageCircle, Star, X } from 'lucide-react'
 
 const filters = [
   { key: 'all', label: 'Tous' },
@@ -13,6 +13,7 @@ const filters = [
 const statusConfig = {
   preproduction: { label: 'En Préproduction', color: '#f59e0b' },
   production: { label: 'En Production', color: '#34d399' },
+  development: { label: 'En Développement', color: '#EC3C82' },
   archive: { label: 'Archive', color: '#7a8ba8' },
 }
 
@@ -35,7 +36,7 @@ function ProjectModal({ project, onClose }) {
         animate={{ opacity: 1, y: 0, scale: 1 }}
         exit={{ opacity: 0, y: 30, scale: 0.95 }}
         transition={{ duration: 0.3 }}
-        className="w-full max-w-lg rounded-[16px] p-6 md:p-8 relative"
+        className="w-full max-w-lg max-h-[90vh] overflow-y-auto rounded-[16px] p-6 md:p-8 relative"
         style={{
           background: 'rgba(26,31,53,0.95)',
           border: '1px solid rgba(96,165,250,0.15)',
@@ -72,30 +73,61 @@ function ProjectModal({ project, onClose }) {
           {project.description}
         </p>
 
-        {/* Description longue */}
-        {project.longDescription && (
-          <p className="text-sm leading-relaxed mb-5" style={{ color: '#7a8ba8' }}>
-            {project.longDescription}
-          </p>
+        {/* Modules */}
+        {project.modules && (
+          <>
+            <p className="text-xs font-semibold tracking-[2px] uppercase mb-3" style={{ color: '#60a5fa' }}>
+              Modules
+            </p>
+            <ul className="space-y-2 mb-5">
+              {project.modules.map((m) => (
+                <li key={m.name} className="text-sm leading-relaxed" style={{ color: '#94a3b8' }}>
+                  <span className="font-semibold" style={{ color: '#f8fafc' }}>{m.name}</span> : {m.description}
+                </li>
+              ))}
+            </ul>
+          </>
         )}
 
-        {/* Stack technique */}
+        {/* Description longue (texte simple ou liste de paragraphes) */}
+        {project.longDescription && (
+          <div className="space-y-3 mb-5">
+            {[].concat(project.longDescription).map((paragraph) => (
+              <p key={paragraph} className="text-sm leading-relaxed" style={{ color: '#7a8ba8' }}>
+                {paragraph}
+              </p>
+            ))}
+          </div>
+        )}
+
+        {/* Stack technique (groupée par catégorie si techGroups est défini) */}
         <p className="text-xs font-semibold tracking-[2px] uppercase mb-3" style={{ color: '#60a5fa' }}>
           Stack technique
         </p>
-        <div className="flex flex-wrap gap-1.5 mb-6">
-          {project.tech.map((t) => (
-            <span
-              key={t}
-              className="text-xs px-2.5 py-1 rounded-md font-mono"
-              style={{
-                background: 'rgba(96,165,250,0.08)',
-                color: '#60a5fa',
-                border: '1px solid rgba(96,165,250,0.12)',
-              }}
-            >
-              {t}
-            </span>
+        <div className="space-y-3 mb-6">
+          {(project.techGroups ?? [{ label: null, items: project.tech }]).map((group) => (
+            <div key={group.label ?? 'tech'}>
+              {group.label && (
+                <p className="text-xs font-medium mb-1.5" style={{ color: '#94a3b8' }}>
+                  {group.label}
+                </p>
+              )}
+              <div className="flex flex-wrap gap-1.5">
+                {group.items.map((t) => (
+                  <span
+                    key={t}
+                    className="text-xs px-2.5 py-1 rounded-md font-mono"
+                    style={{
+                      background: 'rgba(96,165,250,0.08)',
+                      color: '#60a5fa',
+                      border: '1px solid rgba(96,165,250,0.12)',
+                    }}
+                  >
+                    {t}
+                  </span>
+                ))}
+              </div>
+            </div>
           ))}
         </div>
 
@@ -121,6 +153,15 @@ function ProjectModal({ project, onClose }) {
               style={{ background: 'linear-gradient(135deg, #3b82f6, #2563eb)' }}
             >
               <ExternalLink size={15} /> Démo live
+            </a>
+          )}
+          {!project.demo && project.demoOnRequest && (
+            <a href="#contact"
+              onClick={onClose}
+              className="flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium text-white"
+              style={{ background: 'linear-gradient(135deg, #3b82f6, #2563eb)' }}
+            >
+              <MessageCircle size={15} /> Démo sur demande
             </a>
           )}
         </div>

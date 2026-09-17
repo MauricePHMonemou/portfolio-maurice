@@ -12,6 +12,43 @@ const projects = [
     featured: true,
   },
   {
+    id: 4,
+    name: 'MONEA MULTI SERVICES',
+    description: 'Une plateforme de gestion sur mesure pour un groupe guinéen de loisirs, d\'hôtellerie et de commerce : ventes au comptoir, stock, hôtels et livreurs.',
+    modules: [
+      { name: 'MONEA CLUB', description: 'boîtes de nuit, comptoirs et livraison' },
+      { name: 'MONEA Hôtellerie', description: 'hôtels, chambres et vitrine client' },
+      { name: 'MONEA SHOP', description: 'boutique en ligne (module à venir)' },
+    ],
+    longDescription: [
+      'Le projet MONEA MULTI SERVICES est une plateforme web complète pour un groupe implanté dans plusieurs villes de la Guinée. Elle gère trois niveaux de responsables (National, par Ville et par Établissement), avec des droits d\'accès précis pour chaque rôle.',
+      'MONEA CLUB : C\'est l\'interface qui sert à enregistrer les ventes dans les boîtes de nuit, dans la Cave en ligne à travers la vitrine. S\'y ajoutent la gestion du catalogue et des prix par canal de vente, les transferts de stock entre villes, et un parcours d\'inscription pour devenir livreur.',
+      'MONEA Hôtellerie :C\'est la vitrine de gestion des hôtels et des chambres (galeries photos avec recadrage), médias propres à chaque hôtel (vidéos et images en boucle, catalogue) et un parcours client guidé : ville → hôtel → page dédiée.',
+      'Sécurité et qualité : architecture hexagonale (monolithe modulaire), authentification JWT avec renouvellement et double authentification (TOTP), chiffrement des données sensibles, interface en français et en anglais, thèmes clair et sombre. L\'application est testée avec Jest, Vitest et Playwright, sur une base de test isolée.',
+      'MONEA SHOP (Boutique en ligne) est le prochain module prévu.',
+      'Conçu et développé intégralement en autonomie.',
+    ],
+    // tech : liste à plat pour la carte (les 4 premiers tags sont affichés, puis +N)
+    tech: [
+      'Next.js 15', 'NestJS 11', 'PostgreSQL 16', 'Prisma',
+      'React 19', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'TanStack Query', 'Zustand', 'React Hook Form', 'Zod', 'next-intl', 'Mapbox GL',
+      'Redis', 'Socket.IO', 'Argon2', 'PDFKit', 'nestjs-i18n', 'Pino',
+      'Docker', 'MinIO (S3)', 'pnpm (monorepo)', 'Jest', 'Vitest', 'Playwright',
+    ],
+    // techGroups : stack groupée affichée dans la modale
+    techGroups: [
+      { label: 'Frontend', items: ['Next.js 15', 'React 19', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'TanStack Query', 'Zustand', 'React Hook Form', 'Zod', 'next-intl', 'Mapbox GL'] },
+      { label: 'Backend', items: ['NestJS 11', 'Prisma', 'PostgreSQL 16', 'Redis', 'Socket.IO', 'Argon2', 'PDFKit', 'nestjs-i18n', 'Pino'] },
+      { label: 'Infra et tests', items: ['Docker', 'MinIO (S3)', 'pnpm (monorepo)', 'Jest', 'Vitest', 'Playwright'] },
+    ],
+    category: 'full-stack',
+    status: 'development',
+    github: '',
+    demo: '',
+    demoOnRequest: true,
+    featured: true,
+  },
+  {
     id: 2,
     name: 'App Réclamation Notes',
     description: 'Application web de gestion des réclamations de notes des étudiantes.',
