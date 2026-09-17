@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { createPortal } from 'react-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import useInView from '../hooks/useInView'
 import projects from '../data/projects'
@@ -247,17 +248,17 @@ export default function Projects() {
               }}
             >
               {/* Header carte */}
-              <div className="flex items-start justify-between mb-4">
+              <div className="flex items-start justify-between gap-3 mb-4">
                 <div className="flex items-center gap-2">
                   {project.featured && (
-                    <Star size={14} style={{ color: '#f59e0b', fill: '#f59e0b' }} />
+                    <Star size={14} className="shrink-0" style={{ color: '#f59e0b', fill: '#f59e0b' }} />
                   )}
                   <h3 className="text-base font-bold" style={{ color: '#f8fafc' }}>
                     {project.name}
                   </h3>
                 </div>
                 <span
-                  className="text-xs font-semibold px-2.5 py-0.5 rounded-md"
+                  className="text-xs font-semibold px-2.5 py-0.5 rounded-md whitespace-nowrap shrink-0"
                   style={{
                     background: `${statusConfig[project.status].color}15`,
                     color: statusConfig[project.status].color,
@@ -303,15 +304,19 @@ export default function Projects() {
         </div>
       </div>
 
-      {/* Modal */}
-      <AnimatePresence>
-        {selectedProject && (
-          <ProjectModal
-            project={selectedProject}
-            onClose={() => setSelectedProject(null)}
-          />
-        )}
-      </AnimatePresence>
+      {/* Modal : rendue dans <body> pour passer au-dessus de la navbar
+          (<main> a un z-index qui enfermerait le z-50 de la modale) */}
+      {createPortal(
+        <AnimatePresence>
+          {selectedProject && (
+            <ProjectModal
+              project={selectedProject}
+              onClose={() => setSelectedProject(null)}
+            />
+          )}
+        </AnimatePresence>,
+        document.body
+      )}
     </section>
   )
 }

@@ -23,7 +23,7 @@ const projects = [
     longDescription: [
       'Le projet MONEA MULTI SERVICES est une plateforme web complète pour un groupe implanté dans plusieurs villes de la Guinée. Elle gère trois niveaux de responsables (National, par Ville et par Établissement), avec des droits d\'accès précis pour chaque rôle.',
       'MONEA CLUB : C\'est l\'interface qui sert à enregistrer les ventes dans les boîtes de nuit, dans la Cave en ligne à travers la vitrine. S\'y ajoutent la gestion du catalogue et des prix par canal de vente, les transferts de stock entre villes, et un parcours d\'inscription pour devenir livreur.',
-      'MONEA Hôtellerie :C\'est la vitrine de gestion des hôtels et des chambres (galeries photos avec recadrage), médias propres à chaque hôtel (vidéos et images en boucle, catalogue) et un parcours client guidé : ville → hôtel → page dédiée.',
+      'MONEA Hôtellerie : C\'est la vitrine de gestion des hôtels et des chambres (galeries photos avec recadrage), médias propres à chaque hôtel (vidéos et images en boucle, catalogue) et un parcours client guidé : ville → hôtel → page dédiée.',
       'Sécurité et qualité : architecture hexagonale (monolithe modulaire), authentification JWT avec renouvellement et double authentification (TOTP), chiffrement des données sensibles, interface en français et en anglais, thèmes clair et sombre. L\'application est testée avec Jest, Vitest et Playwright, sur une base de test isolée.',
       'MONEA SHOP (Boutique en ligne) est le prochain module prévu.',
       'Conçu et développé intégralement en autonomie.',
